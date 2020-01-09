@@ -46,7 +46,7 @@ function createApp() {
 
   // Initialize routes
   const router = createRouter();
-  app.use('/', router);
+  app.use(config.BASE_URL, router);
 
   app.use(errorLogger());
   app.use(errorResponder());
